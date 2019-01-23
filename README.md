@@ -1,5 +1,8 @@
 # Arduino Library for Cytron Motor Drivers
-This library provides functions to control Cytron Motor Drivers.
+This library provides functions to control Cytron Motor Drivers.<br>
+The examples only show how to drive a single motor for simplicity.<br>
+For multi channels motor driver, all channels work the same way.<br>
+
 Please refer to the example list below for all the compatible motor drivers.
 
 ### 1. PWM_DIR
