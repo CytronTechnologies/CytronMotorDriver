@@ -6,8 +6,8 @@
  ********************************************************************************
  * DESCRIPTION:
  *
- * This example shows how to drive 2 motors using the PWM and DIR pins with
- * 2-channel motor driver.
+ * This example shows how to drive 2 motors using 4 PWM pins (2 for each motor)
+ * with 2-channel motor driver.
  * 
  * 
  * CONNECTIONS:
