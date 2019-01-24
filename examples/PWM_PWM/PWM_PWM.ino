@@ -13,8 +13,8 @@
  * 
  * CONNECTIONS:
  * 
- * Arduino D3  - Motor Driver PWM Input 1
- * Arduino D4  - Motor Driver PWM Input 2
+ * Arduino D3  - Motor Driver PWM A Input
+ * Arduino D4  - Motor Driver PWM B Input
  * Arduino GND - Motor Driver GND
  *
  *
@@ -29,7 +29,7 @@
 
 
 // Configure the motor driver.
-CytronMD motor(PWM_PWM, 3, 4);  // PWM 1 = Pin 3, PWM 2 = Pin 4.
+CytronMD motor(PWM_PWM, 3, 4);  // PWM A = Pin 3, PWM B = Pin 4.
 
 
 // The setup routine runs once when you press reset.
