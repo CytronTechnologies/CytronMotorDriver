@@ -11,6 +11,8 @@ Connection to the motor driver is described in the comment section of the exampl
 5. Examples can be opened in Arduino IDE from `File` -> `Examples` -> `Cytron DC Motors Library`.<br>
 Please refer to the example list below for all the compatible motor drivers.
 
+
+## Examples
 ### 1. PWM_DIR
 This example shows how to drive a motor using PWM and DIR pins.<br>
 PWM pin is used to control the speed of the motor while DIR pin is used to control the direction.<br>
