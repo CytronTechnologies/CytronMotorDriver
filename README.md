@@ -24,6 +24,7 @@ For multi channels motor driver, all channels work the same way.<br>
 * [MD10C](https://www.cytron.io/p-md10c)
 * [MD10-POT](https://www.cytron.io/p-md10-pot)
 * [MD13S](https://www.cytron.io/p-md13s)
+* [MD20A](https://www.cytron.io/p-20amp-6v-30v-dc-motor-driver)
 * [MD30C](https://www.cytron.io/p-md30c)
 * [SHIELD-MD10](https://www.cytron.io/p-shield-md10)
 * [MDS160A*](https://www.cytron.io/p-mds160a)
