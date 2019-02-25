@@ -4,9 +4,9 @@ Please refer to the examples on how to use the library.<br>
 Connection to the motor driver is described in the comment section of the examples.
 
 ## Installation
-1. Click on the `Clone or download` button and download ZIP.
-2. Open the Arduino IDE, select `Sketch` -> `Include Library` -> `Add .ZIP Library...`.
-3. Select the downloaded ZIP file.
+1. Open the Arduino IDE, select `Sketch` -> `Include Library` -> `Manage Libraries...`.
+2. Search for `Cytron Motor Drivers Library`.
+3. Click `Install` to install the library.
 4. Restart the Arduino IDE.
 5. Examples can be opened in Arduino IDE from `File` -> `Examples` -> `Cytron DC Motors Library`.<br>
 Please refer to the example list below for all the compatible motor drivers.
