@@ -57,4 +57,4 @@ Input A controls the motor speed in forward direction and Input B controls the m
 
 **Compatible Motor Drivers:**
 * [MAKER-DRIVE](https://www.cytron.io/p-maker-drive)
-* [MDD03A](https://www.cytron.io/p-mdd03a)
+* [MDD3A](https://www.cytron.io/p-mdd3a)
