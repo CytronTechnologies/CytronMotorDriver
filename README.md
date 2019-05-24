@@ -25,6 +25,7 @@ For multi channels motor driver, all channels work the same way.<br>
 * [MD10-POT](https://www.cytron.io/p-md10-pot)
 * [MD13S](https://www.cytron.io/p-md13s)
 * [MD20A](https://www.cytron.io/p-20amp-6v-30v-dc-motor-driver)
+* [MD25HV*](https://www.cytron.io/p-md25hv)
 * [MD30C](https://www.cytron.io/p-md30c)
 * [SHIELD-MD10](https://www.cytron.io/p-shield-md10)
 * [MDS160A*](https://www.cytron.io/p-mds160a)
@@ -41,6 +42,7 @@ PWM pin is used to control the speed of the motor while DIR pin is used to contr
 **Compatible Motor Drivers:**
 * [SHIELD-2AMOTOR](https://www.cytron.io/p-shield-2amotor)
 * [SHIELD-3AMOTOR](https://www.cytron.io/p-shield-3amotor)
+* [SHIELD-MDD10*](https://www.cytron.io/p-shield-mdd10)
 * [MDD10A](https://www.cytron.io/p-mdd10a)
 * [FD04A](https://www.cytron.io/p-fd04a)
 * [MDDS10*](https://www.cytron.io/p-mdds10)
