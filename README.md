@@ -42,7 +42,7 @@ PWM pin is used to control the speed of the motor while DIR pin is used to contr
 **Compatible Motor Drivers:**
 * [SHIELD-2AMOTOR](https://www.cytron.io/p-shield-2amotor)
 * [SHIELD-3AMOTOR](https://www.cytron.io/p-shield-3amotor)
-* [SHIELD-MDD10*](https://www.cytron.io/p-shield-mdd10)
+* [SHIELD-MDD10](https://www.cytron.io/p-shield-mdd10)
 * [MDD10A](https://www.cytron.io/p-mdd10a)
 * [FD04A](https://www.cytron.io/p-fd04a)
 * [MDDS10*](https://www.cytron.io/p-mdds10)
