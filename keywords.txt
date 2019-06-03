@@ -4,7 +4,7 @@
 # Class
 #############################################
 
-CytronMD KEYWORD3
+CytronMD	KEYWORD3
 
 
 
@@ -12,7 +12,7 @@ CytronMD KEYWORD3
 # Methods and Functions 
 #############################################
 
-setSpeed KEYWORD2
+setSpeed	KEYWORD2
 
 
 
