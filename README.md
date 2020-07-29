@@ -44,6 +44,7 @@ PWM pin is used to control the speed of the motor while DIR pin is used to contr
 * [SHIELD-3AMOTOR](https://www.cytron.io/p-shield-3amotor)
 * [SHIELD-MDD10](https://www.cytron.io/p-shield-mdd10)
 * [MDD10A](https://www.cytron.io/p-mdd10a)
+* [MDD20A](https://www.cytron.io/p-mdd20a)
 * [FD04A](https://www.cytron.io/p-fd04a)
 * [MDDS10*](https://www.cytron.io/p-mdds10)
 * [MDDS30*](https://www.cytron.io/p-mdds30)
