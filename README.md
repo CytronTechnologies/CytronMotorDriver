@@ -3,6 +3,14 @@ This library provides functions for Cytron Motor Drivers.<br>
 Please refer to the examples on how to use the library.<br>
 Connection to the motor driver is described in the comment section of the examples.
 
+## Support
+This library is compatible with the following boards:
+
+- Arduino Uno in PWM_DIR and PWM_PWM mode.
+- ESP32 in PWM_DIR mode.
+
+Please note that the library may work with other Arduino-compatible boards as well, but it has been specifically tested and confirmed to work with Arduino Uno in both the modes and ESP32 in PWM_DIR mode.
+
 ## Installation
 1. Open the Arduino IDE, select `Sketch` -> `Include Library` -> `Manage Libraries...`.
 2. Search for `Cytron Motor Drivers Library`.

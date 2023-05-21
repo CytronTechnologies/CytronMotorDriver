@@ -11,12 +11,21 @@
  * For dual channel motor driver, both channel work the same way.
  * 
  * 
- * CONNECTIONS:
+ * CONNECTIONS: Arduino Uno
  * 
  * Arduino D3  - Motor Driver PWM Input
  * Arduino D4  - Motor Driver DIR Input
  * Arduino GND - Motor Driver GND
+ * 
+ * CONNECTIONS: ESP32
+ * 
+ * ESP32 D2  - Motor Driver PWM Input
+ * ESP32 D4  - Motor Driver DIR Input
+ * ESP32 GND - Motor Driver GND
  *
+ * NOTE: 
+ * 1. Default value for channel is 0.
+ * 2. Different channels (0 - 15) should be assigned for every CytronMD instance.
  *
  * AUTHOR   : Kong Wai Weng
  * COMPANY  : Cytron Technologies Sdn Bhd
@@ -29,7 +38,7 @@
 
 
 // Configure the motor driver.
-CytronMD motor(PWM_DIR, 3, 4);  // PWM = Pin 3, DIR = Pin 4.
+CytronMD motor(PWM_DIR, 2, 4, 0);  // PWM = Pin 2, DIR = Pin 4, CHANNEL = 0.
 
 
 // The setup routine runs once when you press reset.

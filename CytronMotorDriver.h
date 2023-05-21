@@ -16,16 +16,15 @@ enum MODE {
 class CytronMD
 {
   public:
-    CytronMD(MODE mode, uint8_t pin1, uint8_t pin2);
+    CytronMD(MODE mode, uint8_t pin1, uint8_t pin2, uint8_t channel = 0);
     void setSpeed(int16_t speed);
     
   protected:
     MODE _mode;
   	uint8_t _pin1;
     uint8_t _pin2;
+    uint8_t _channel;
 };
-
-
 
 /* class CytronMD10C : public CytronMD
 {
