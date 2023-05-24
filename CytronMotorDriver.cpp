@@ -51,7 +51,7 @@ void CytronMD::setSpeed(int16_t speed)
                   #if defined(ARDUINO_ARCH_ESP32)
                         ledcWrite(_channel, -speed);
                   #else
-                        analogWrite(_pin1, speed);
+                        analogWrite(_pin1, -speed);
                   #endif
                   digitalWrite(_pin2, HIGH);
             }
