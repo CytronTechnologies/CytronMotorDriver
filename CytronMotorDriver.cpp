@@ -61,7 +61,7 @@ CytronMD::CytronMD(MODE mode, uint8_t pin1, uint8_t pin2)
                         {
 #if defined(ARDUINO_ARCH_ESP32)
 
-                              ledcWrite(_pin1, speed);
+                              ledcWrite(ledChannel, speed);
 #else
                         analogWrite(_pin1, speed);
 #endif
@@ -72,7 +72,7 @@ CytronMD::CytronMD(MODE mode, uint8_t pin1, uint8_t pin2)
                         {
 
 #if defined(ARDUINO_ARCH_ESP32)
-                              ledcWrite(_pin1, -speed);
+                              ledcWrite(ledChannel, -speed);
 #else
                         analogWrite(_pin1, -speed);
 #endif
@@ -85,8 +85,8 @@ CytronMD::CytronMD(MODE mode, uint8_t pin1, uint8_t pin2)
                         if (speed >= 0)
                         {
 #if defined(ARDUINO_ARCH_ESP32)
-                              ledcWrite(_pin1, speed);
-                              ledcWrite(_pin2, 0);
+                              ledcWrite(ledChannel, speed);
+                              ledcWrite(ledChanne2, 0);
 #else
                         analogWrite(_pin1, speed);
                         analogWrite(_pin2, 0);
@@ -95,8 +95,8 @@ CytronMD::CytronMD(MODE mode, uint8_t pin1, uint8_t pin2)
                         else
                         {
 #if defined(ARDUINO_ARCH_ESP32)
-                              ledcWrite(_pin1, -speed);
-                              ledcWrite(_pin2, 255);
+                              ledcWrite(ledChannel, -speed);
+                              ledcWrite(ledChanne2, 255);
 #else
                         analogWrite(_pin1, -speed);
                         analogWrite(_pin2, 255);
