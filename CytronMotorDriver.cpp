@@ -14,11 +14,13 @@ CytronMD::CytronMD(MODE mode, uint8_t pin1, uint8_t pin2)
 
 #if defined(ARDUINO_ARCH_ESP32)
 
-      // configure LED PWM functionalitites
+      // configure PWM functionalitites
       ledcSetup(ledChannel, freq, resolution);
 
       // attach the channel to the GPIO to be controlled
       ledcAttachPin(_pin1, ledChannel);
+
+      ledcWrite(ledChannel, 0);
 
       switch (_mode)
       {
@@ -29,9 +31,9 @@ CytronMD::CytronMD(MODE mode, uint8_t pin1, uint8_t pin2)
       case PWM_PWM:
             ledcSetup(ledChanne2, freq, resolution);
             ledcAttachPin(_pin2, ledChanne2);
-
-            ledcWrite(_pin1, 0);
-            ledcWrite(_pin2, 0);
+            ledcWrite(ledChanne2, 0);
+            break;
+      }
 
 #else
       pinMode(_pin1, OUTPUT);
@@ -41,67 +43,67 @@ CytronMD::CytronMD(MODE mode, uint8_t pin1, uint8_t pin2)
       digitalWrite(_pin2, LOW);
 #endif
 
-            void CytronMD::setSpeed(int16_t speed)
+      void CytronMD::setSpeed(int16_t speed)
+      {
+            // Make sure the speed is within the limit.
+            if (speed > 255)
             {
-                  // Make sure the speed is within the limit.
-                  if (speed > 255)
-                  {
-                        speed = 255;
-                  }
-                  else if (speed < -255)
-                  {
-                        speed = -255;
-                  }
+                  speed = 255;
+            }
+            else if (speed < -255)
+            {
+                  speed = -255;
+            }
 
-                  // Set the speed and direction.
-                  switch (_mode)
+            // Set the speed and direction.
+            switch (_mode)
+            {
+            case PWM_DIR:
+                  if (speed >= 0)
                   {
-                  case PWM_DIR:
-                        if (speed >= 0)
-                        {
 #if defined(ARDUINO_ARCH_ESP32)
 
-                              ledcWrite(ledChannel, speed);
+                        ledcWrite(ledChannel, speed);
 #else
                         analogWrite(_pin1, speed);
 #endif
 
-                              digitalWrite(_pin2, LOW);
-                        }
-                        else
-                        {
+                        digitalWrite(_pin2, LOW);
+                  }
+                  else
+                  {
 
 #if defined(ARDUINO_ARCH_ESP32)
-                              ledcWrite(ledChannel, -speed);
+                        ledcWrite(ledChannel, -speed);
 #else
                         analogWrite(_pin1, -speed);
 #endif
 
-                              digitalWrite(_pin2, HIGH);
-                        }
-                        break;
+                        digitalWrite(_pin2, HIGH);
+                  }
+                  break;
 
-                  case PWM_PWM:
-                        if (speed >= 0)
-                        {
+            case PWM_PWM:
+                  if (speed >= 0)
+                  {
 #if defined(ARDUINO_ARCH_ESP32)
-                              ledcWrite(ledChannel, speed);
-                              ledcWrite(ledChanne2, 0);
+                        ledcWrite(ledChannel, speed);
+                        ledcWrite(ledChanne2, 0);
 #else
                         analogWrite(_pin1, speed);
                         analogWrite(_pin2, 0);
 #endif
-                        }
-                        else
-                        {
+                  }
+                  else
+                  {
 #if defined(ARDUINO_ARCH_ESP32)
-                              ledcWrite(ledChannel, -speed);
-                              ledcWrite(ledChanne2, 255);
+                        ledcWrite(ledChannel, -speed);
+                        ledcWrite(ledChanne2, 255);
 #else
                         analogWrite(_pin1, -speed);
                         analogWrite(_pin2, 255);
 #endif
-                        }
-                        break;
                   }
+                  break;
             }
+      }
